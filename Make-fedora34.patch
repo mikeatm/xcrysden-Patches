@@ -1,7 +1,7 @@
 27c27
 < CFLAGS += -ffast-math -funroll-loops -fPIC -pedantic -Wall
 ---
-> CFLAGS += -ffast-math -funroll-loops -fPIC -pedantic -Wall -I/home/username/Togl2.0
+> CFLAGS += -ffast-math -funroll-loops -fPIC -pedantic -Wall -fcommon -I/home/username/Togl2.0
 34c34
 < FFLAGS  += -static-libgfortran -static-libgcc -fdefault-double-8 -fdefault-real-8 -O2
 ---
