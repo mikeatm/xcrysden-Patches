@@ -1,0 +1,42 @@
+27c27
+< CFLAGS += -ffast-math -funroll-loops -fPIC -pedantic -Wall
+---
+> CFLAGS += -ffast-math -funroll-loops -fPIC -pedantic -Wall -I/home/username/Togl2.0
+34c34
+< FFLAGS  += -static-libgfortran -static-libgcc -fdefault-double-8 -fdefault-real-8 -O2
+---
+> FFLAGS  += -L/usr/lib64 -static-libgcc -fdefault-double-8 -fdefault-real-8 -O2
+46c46
+< X_LIB     = -lXmu -lX11 
+---
+> X_LIB     = -lXmu -lX11 -I/home/username/Togl2.0
+53,56c53,56
+< COMPILE_TCLTK    = yes
+< COMPILE_TOGL     = yes
+< COMPILE_MESA     = yes
+< COMPILE_FFTW     = yes
+---
+> COMPILE_TCLTK    = no
+> COMPILE_TOGL     = no
+> COMPILE_MESA     = no
+> COMPILE_FFTW     = no
+65c65
+< TOGL_OPTIONS   = --enable-shared --with-tcl=$(TOPDIR)/external/lib --with-tk=$(TOPDIR)/external/lib
+---
+> TOGL_OPTIONS   = --enable-shared --with-tcl=/home/username/Togl2.0 --with-tk=/home/username/Togl2.0
+77c77
+< TCL_LIB      = -L$(TOPDIR)/external/lib -ltcl$(TCL_VER2)
+---
+> TCL_LIB      = -L/usr/lib64 -ltcl$(TCL_VER2)
+79c79
+< TOGL_LIB     = -lTogl$(TOGL_VER)
+---
+> TOGL_LIB     = -L/home/username/Togl2.0 -lTogl$(TOGL_VER)
+90,92c90,92
+< TCL_INCDIR      = -I$(TOPDIR)/external/include
+< TK_INCDIR       =
+< TOGL_INCDIR     =
+---
+> TCL_INCDIR      = 
+> TK_INCDIR       = 
+> TOGL_INCDIR     = 
